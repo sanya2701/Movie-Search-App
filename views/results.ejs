@@ -1,0 +1,21 @@
+<% include partials/header %>
+
+<h1>Results</h1><br>
+<div class="row">
+
+<% pData["Search"].forEach(function(movie){ %>
+  <div class="col-md-4">
+    <div class="thumbnail">
+      <a href="<%= movie['Poster'] %>" target="_blank">
+        <img src="<%= movie['Poster'] %>" alt="Lights" style="width:100%">
+      </a>
+     <b><%= movie["Title"] %></b> - <%= movie["Year"] %>
+    </div>
+  </div>
+<% }) %>
+
+</div>
+
+<br><a href = "search"><-Back</a>
+
+<% include partials/footer %>
